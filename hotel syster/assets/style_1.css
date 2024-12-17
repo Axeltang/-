@@ -1,0 +1,209 @@
+/* 设置全局页面背景，字体和布局 */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* 页面容器 */
+.container {
+  width: calc(100% - 260px); /* 减去侧边栏的宽度 */
+  max-width: 1400px;
+  margin-left: 260px; /* 为侧边栏留出空间 */
+  margin-top: 50px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background-color: #2c3e50;
+  padding: 30px 20px;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  color: #ecf0f1;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: #ecf0f1;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #34495e;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #2980b9;
+}
+
+.sidebar a i {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+/* 表格设计 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+table th, table td {
+  padding: 12px 20px;  /* 调整上下内边距，使行高减少 */
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* 分页按钮 */
+.pagination a {
+  padding: 10px 15px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #2980b9;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.pagination .current {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+}
+
+/* 按钮设计 */
+button {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 5px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* 输入框样式 */
+input[type="text"], input[type="password"] {
+  width: 80%;
+  padding: 15px;
+  margin: 20px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.3);
+  outline: none;
+}
+
+/* 对话框设计 */
+dialog {
+  padding: 30px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.dialog-buttons button {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* 链接样式 */
+a {
+  color: #2980b9;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .container {
+      width: 100%;
+      margin-left: 0;
+      padding: 20px;
+  }
+
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 10px;
+      box-shadow: none;
+  }
+
+  .sidebar a {
+      font-size: 16px;
+      padding: 10px;
+  }
+}
